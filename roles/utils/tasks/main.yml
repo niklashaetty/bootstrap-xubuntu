@@ -1,0 +1,9 @@
+---
+- name: Update apt
+  become: yes
+  apt:
+    cache_valid_time: 1800
+    update_cache: yes
+
+- name: Starting utils.yml
+  include_tasks: utils.yml

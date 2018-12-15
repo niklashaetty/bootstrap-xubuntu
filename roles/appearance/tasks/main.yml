@@ -1,0 +1,12 @@
+---
+- name: Starting ppa.yml
+  include_tasks: ppa.yml
+
+- name: Update apt
+  become: yes
+  apt:
+    cache_valid_time: 1800
+    update_cache: yes
+
+- name: Starting appearance.yml
+  include_tasks: appearance.yml

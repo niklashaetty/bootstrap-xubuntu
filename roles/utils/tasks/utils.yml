@@ -1,0 +1,16 @@
+---
+- name: Install easy_install
+  apt:
+    name: ['python-setuptools', 'python-dev', 'build-essential']
+  become: yes
+
+- name: Ensure Pip is installed.
+  package:
+    name: python-pip
+    state: present
+  become: yes
+
+- name: Install python-psutil package
+  apt: 
+    name: python-psutil
+  become: yes

@@ -1,0 +1,6 @@
+---
+
+- apt_repository:
+    repo: ppa:papirus/papirus
+    state: present
+    update_cache: false
