@@ -19,7 +19,7 @@ ansible-playbook start.yml --extra-vars "ansible_become_pass=<sudo_password>"
 The easiest way to find out what the setting is called is by monitoring the channel and manually changing the setting. For example, if we want to change the wallpaper we monitor the xfce4-desktop channel:
 
 ```console
-niklas@nangijala:~$ xfconf-query -c xsettings -m
+niklas@nangijala:~$ xfconf-query -c xfce4-desktop -m
 Start monitoring channel "xfce4-desktop":
 ```
  and then change the wallpaper manually, which will give us the following output:
