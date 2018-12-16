@@ -4,7 +4,7 @@
 
 ### Install Ansible
 ```console
-sudo apt install ansible
+$ sudo apt install ansible
 ```
 
 ### Set user
@@ -12,7 +12,7 @@ Edit the 'user' parameter in  ```host_vars/all```
 
 ### Run the scripts
 ```console
-ansible-playbook start.yml --extra-vars "ansible_become_pass=<sudo_password>"
+$ ansible-playbook start.yml --extra-vars "ansible_become_pass=<sudo_password>"
 ```
 
 ## How to monitor for xfce4 settings.
