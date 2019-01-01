@@ -1,16 +1,7 @@
 ---
-- name: Create wallpaper dir
-  file:
-    path: /home/{{user}}/Pictures/wallpaper/
-    state: directory
-
-- name: Copy wallpaper
-  copy:
-    src: files/wallpaper.png
-    dest: /home/{{user}}/Pictures/wallpaper/wallpaper.png
 
 - name: Set wallpaper
-  shell: "xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set /home/{{user}}/Pictures/wallpaper/wallpaper.png"
+  shell: "xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set {{ install_dir }}/wallpaper.png"
 
 - name: Remove default icons
   shell: "xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-{{item}} --set false"

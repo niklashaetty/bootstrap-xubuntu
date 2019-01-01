@@ -9,5 +9,5 @@
 
 - name: Copy terminal theme
   copy:
-    src: files/terminal/nord.theme
+    src: "{{ install_dir }}/terminal/nord.theme"
     dest: ~/.local/share/xfce4/terminal/colorschemes/nord.theme

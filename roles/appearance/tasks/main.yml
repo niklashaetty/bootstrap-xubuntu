@@ -9,6 +9,15 @@
     update_cache: yes
   ignore_errors: yes
 
+- name: Set install file dir fact
+  set_fact:
+    install_dir: ~/install-files
+
+- name: Synch files
+  synchronize:
+    src: files/
+    dest: "{{ install_dir }}/"
+
 - name: Starting desktop.yml
   include_tasks: desktop.yml
 

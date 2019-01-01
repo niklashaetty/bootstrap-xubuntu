@@ -6,7 +6,7 @@
 
 - name: Extract victory-gtk-theme-18.07.tar.gz theme to ~/.themes/
   unarchive:
-    src: files/theme/victory-gtk-theme-18.07.tar.gz
+    src: "{{ install_dir}}/theme/victory-gtk-theme-18.07.tar.gz"
     dest: ~/.themes/
 
 - name: Set theme to victory-gtk-theme-18
