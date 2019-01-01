@@ -5,10 +5,3 @@
 - name: Starting to install sublime
   include_tasks: sublime.yml
 
-- name: Install general package
-  apt:
-    name: "{{ item }}"
-  with_items:
-    - vim
-    - htop
-  become: yes
