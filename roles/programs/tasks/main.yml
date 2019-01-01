@@ -1,7 +1,9 @@
 ---
 - name: Starting to install chrome
   include_tasks: chrome.yml
+  become: yes
 
 - name: Starting to install sublime
   include_tasks: sublime.yml
+  become: yes
 
