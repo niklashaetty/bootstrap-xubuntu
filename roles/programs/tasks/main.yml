@@ -1,3 +1,6 @@
 ---
 - name: Starting to install chrome
   include_tasks: chrome.yml
+
+- name: Starting to install sublime
+  include_tasks: sublime.yml
