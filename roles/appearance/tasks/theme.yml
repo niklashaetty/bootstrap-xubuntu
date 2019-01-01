@@ -4,11 +4,11 @@
     path: ~/.themes/
     state: directory
 
-- name: Extract Zukitre theme to ~/.themes/
+- name: Extract victory-gtk-theme-18.07.tar.gz theme to ~/.themes/
   unarchive:
-    src: files/theme/zukitre.tar.gz
+    src: files/theme/victory-gtk-theme-18.07.tar.gz
     dest: ~/.themes/
 
-- name: Set theme to Zukitre
-  shell: "xfconf-query --channel xsettings --property /Net/ThemeName --set Zukitre"
+- name: Set theme to victory-gtk-theme-18
+  shell: "xfconf-query --channel xsettings --property /Net/ThemeName --set victory-gtk-theme-18.07"
 

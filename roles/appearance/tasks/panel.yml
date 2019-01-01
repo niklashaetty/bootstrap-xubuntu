@@ -1,6 +1,16 @@
 ---
-- name: Set panel opacity to 50
-  shell: "xfconf-query --channel xfce4-panel --property /panels/panel-0/background-alpha --set 50"
+- name: Create config dir for panel
+  file:
+    path: ~/.config/xfce4/xfconf/xfce-perchannel-xml/
+    state: directory
+
+- name: Copy panel config
+  copy:
+    src: files/panel/xfce4-panel.xml 
+    dest: ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
+
+- name: Set panel opacity to 100
+  shell: "xfconf-query --channel xfce4-panel --property /panels/panel-0/background-alpha --set 100"
 
 - name: Copy menu logo to icon dir
   copy:
@@ -10,10 +20,6 @@
 
 - name: Unlock panel
   shell: "xfconf-query --channel xfce4-panel --property /panels/panel-0/position -s p=8;x=400;y=970"
-  become: yes
-
-- name: Set panel size
-  shell: "xfconf-query --channel xfce4-panel --property /panels/panel-0/size -s 34"
   become: yes
 
 - name: Reload panel
