@@ -33,19 +33,6 @@
 - name: Set theme to victory-gtk-theme-18
   shell: "xfconf-query --channel xsettings --property /Net/ThemeName --set victory-gtk-theme-18.07"
 
-- name: Set panel opacity to 50
-  shell: "xfconf-query --channel xfce4-panel --property /panels/panel-0/background-alpha --set 50"
-
-- name: Make ~/.local/share/xfce4/terminal/colorschemes/
-  file:
-    path: ~/.local/share/xfce4/terminal/colorschemes/
-    state: directory
-
-- name: Copy terminal theme
-  copy:
-    src: files/terminal/nord.theme
-    dest: ~/.local/share/xfce4/terminal/colorschemes/nord.theme
-
 - name: Copy menu logo to icon dir
   copy:
     src: files/ao-app-tray.svg

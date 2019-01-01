@@ -12,5 +12,8 @@
 - name: Starting appearance.yml
   include_tasks: appearance.yml
 
+- name: Starting terminal.yml
+  include_tasks: terminal.yml
+
 - name: Starting settings.yml
   include_tasks: settings.yml
