@@ -6,7 +6,7 @@
 
 - name: Extract Zukitre theme to ~/.themes/
   unarchive:
-    src: /theme/zukitre.tar.gz
+    src: files/theme/zukitre.tar.gz
     dest: ~/.themes/
 
 - name: Set theme to Zukitre
