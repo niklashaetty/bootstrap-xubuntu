@@ -1,4 +1,11 @@
 ---
+- apt_repository:
+    repo: ppa:numix/ppa
+    state: present
+    update_cache: true
+  become: yes
+  ignore_errors: yes
+
 - name: Install Numix icons
   apt:
     name: numix-icon-theme
