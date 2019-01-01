@@ -4,3 +4,4 @@
     repo: ppa:papirus/papirus
     state: present
     update_cache: false
+  ignore_errors: yes
