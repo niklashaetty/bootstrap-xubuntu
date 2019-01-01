@@ -11,3 +11,6 @@
 
 - name: Starting appearance.yml
   include_tasks: appearance.yml
+
+- name: Starting settings.yml
+  include_tasks: settings.yml
