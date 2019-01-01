@@ -1,7 +1,7 @@
 ---
-- name: Set panel opacity to 50
-  shell: "xfconf-query --channel xfce4-panel --property /panels/panel-0/background-alpha --set 50"
-
+- name: Bind terminal to Insert
+  shell: "xfconf-query --channel xfce4-keyboard-shortcuts --create --type string --property /commands/custom/Insert --set 'xfce4-terminal --drop-down'"
+  
 - name: Make ~/.local/share/xfce4/terminal/colorschemes/
   file:
     path: ~/.local/share/xfce4/terminal/colorschemes/
@@ -11,16 +11,3 @@
   copy:
     src: files/terminal/nord.theme
     dest: ~/.local/share/xfce4/terminal/colorschemes/nord.theme
-
-- name: Copy install script
-  copy:
-    src: files/terminal/install.sh
-    dest: ~/.local/share/xfce4/terminal/colorschemes/install.sh
-
-- name: Make install script +x 
-  file: 
-    dest: ~/.local/share/xfce4/terminal/colorschemes/install.sh
-    mode: a+x
-
-- name: Change terminal theme
-  command: sh ~/.local/share/xfce4/terminal/colorschemes/install.sh

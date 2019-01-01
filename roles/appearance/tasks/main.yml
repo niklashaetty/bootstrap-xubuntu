@@ -15,5 +15,5 @@
 - name: Starting terminal.yml
   include_tasks: terminal.yml
 
-- name: Starting settings.yml
-  include_tasks: settings.yml
+- name: Starting panel.yml
+  include_tasks: panel.yml
