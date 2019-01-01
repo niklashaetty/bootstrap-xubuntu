@@ -1,21 +1,15 @@
 ---
 - apt_repository:
-    repo: ppa:numix/ppa
+    repo: ppa:papirus/papirus
     state: present
-    update_cache: true
-  become: yes
+    update_cache: yes
   ignore_errors: yes
 
-- name: Install Numix icons
+- name: Install papirus-icon-theme
   apt:
-    name: numix-icon-theme
+    name: papirus-icon-theme
   become: yes
 
-- name: Install Numix circle
-  apt:
-    name: numix-icon-theme-circle
-  become: yes
-
-- name: Set icons to numix-icon-theme
-  shell: "xfconf-query --channel xsettings --property /Net/IconThemeName --set numix-icon-theme"
+- name: Set icons to papirus-icon-theme
+  shell: "xfconf-query --channel xsettings --property /Net/IconThemeName --set papirus-icon-theme"
 

@@ -12,5 +12,9 @@
   shell: "xfconf-query --channel xfce4-panel --property /panels/panel-0/position -s p=8;x=400;y=970"
   become: yes
 
+- name: Set panel size
+  shell: "xfconf-query --channel xfce4-panel --property /panels/panel-0/size -s 34"
+  become: yes
+
 - name: Reload panel
   shell: "xfce4-panel -r"

@@ -4,3 +4,6 @@
     name: fonts-roboto
   update_cache: yes
   become: yes
+
+- name: Set font to Roboto 9
+  shell: "xfconf-query --channel xsettings --property /Gtk/FontName --set 'Roboto 9'"
