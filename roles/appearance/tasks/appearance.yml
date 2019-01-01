@@ -6,11 +6,11 @@
 
 - name: Copy wallpaper
   copy:
-    src: files/wallpaper.jpg
-    dest: /home/{{user}}/Pictures/wallpaper/wallpaper.jpg
+    src: files/wallpaper.png
+    dest: /home/{{user}}/Pictures/wallpaper/wallpaper.png
 
 - name: Set wallpaper
-  shell: "xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set /home/{{user}}/Pictures/wallpaper/wallpaper.jpg"
+  shell: "xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set /home/{{user}}/Pictures/wallpaper/wallpaper.png"
 
 - name: Install papirus-icon-theme
   apt:
