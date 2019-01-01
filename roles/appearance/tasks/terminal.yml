@@ -1,7 +1,7 @@
 ---
 - name: Bind terminal to Insert
   shell: "xfconf-query --channel xfce4-keyboard-shortcuts --create --type string --property /commands/custom/Insert --set 'xfce4-terminal --drop-down'"
-  
+
 - name: Make ~/.local/share/xfce4/terminal/colorschemes/
   file:
     path: ~/.local/share/xfce4/terminal/colorschemes/

@@ -9,11 +9,20 @@
     update_cache: yes
   ignore_errors: yes
 
-- name: Starting appearance.yml
-  include_tasks: appearance.yml
+- name: Starting desktop.yml
+  include_tasks: desktop.yml
+
+- name: Starting theme.yml
+  include_tasks: theme.yml
+
+- name: Starting icons.yml
+  include_tasks: icons.yml
 
 - name: Starting terminal.yml
   include_tasks: terminal.yml
 
 - name: Starting panel.yml
   include_tasks: panel.yml
+
+- name: Starting fonts.yml
+  include_tasks: fonts.yml

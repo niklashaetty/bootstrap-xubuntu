@@ -1,0 +1,14 @@
+---
+- name: Make ~/.themes/
+  file:
+    path: ~/.themes/
+    state: directory
+
+- name: Extract Zukitre theme to ~/.themes/
+  unarchive:
+    src: /theme/zukitre.tar.gz
+    dest: ~/.themes/
+
+- name: Set theme to Zukitre
+  shell: "xfconf-query --channel xsettings --property /Net/ThemeName --set Zukitre"
+

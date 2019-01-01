@@ -1,3 +1,0 @@
----
-- name: Bind terminal to Insert
-  shell: "xfconf-query --channel xfce4-keyboard-shortcuts --create --type string --property /commands/custom/Insert --set 'xfce4-terminal --drop-down'"

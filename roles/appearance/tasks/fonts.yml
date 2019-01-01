@@ -1,0 +1,6 @@
+---
+- name: Add fonts-roboto
+  apt:
+    name: fonts-roboto
+  update_cache: yes
+  become: yes

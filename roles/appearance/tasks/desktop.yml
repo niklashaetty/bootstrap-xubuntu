@@ -12,27 +12,6 @@
 - name: Set wallpaper
   shell: "xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitor0/workspace0/last-image --set /home/{{user}}/Pictures/wallpaper/wallpaper.png"
 
-- name: Install papirus-icon-theme
-  apt:
-    name: papirus-icon-theme
-  become: yes
-
-- name: Set icons to papirus-icon-theme
-  shell: "xfconf-query --channel xsettings --property /Net/IconThemeName --set Papirus"
-
-- name: Make ~/.themes/
-  file:
-    path: ~/.themes/
-    state: directory
-
-- name: Extract victory-gtk-theme-18.tar.gz to ~/.themes/
-  unarchive:
-    src: victory-gtk-theme-18.07.tar.gz
-    dest: ~/.themes/
-
-- name: Set theme to victory-gtk-theme-18
-  shell: "xfconf-query --channel xsettings --property /Net/ThemeName --set victory-gtk-theme-18.07"
-
 - name: Remove default icons
   shell: "xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-{{item}} --set false"
   with_items:

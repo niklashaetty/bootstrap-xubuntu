@@ -1,0 +1,4 @@
+---
+- name: Set icons to papirus-icon-theme
+  shell: "xfconf-query --channel xsettings --property /Net/IconThemeName --set Zukitre"
+

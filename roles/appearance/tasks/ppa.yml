@@ -1,5 +1,4 @@
 ---
-
 - apt_repository:
     repo: ppa:papirus/papirus
     state: present
