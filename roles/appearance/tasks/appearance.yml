@@ -33,8 +33,10 @@
 - name: Set theme to victory-gtk-theme-18
   shell: "xfconf-query --channel xsettings --property /Net/ThemeName --set victory-gtk-theme-18.07"
 
-- name: Copy menu logo to icon dir
-  copy:
-    src: files/ao-app-tray.svg
-    dest: /usr/share/icons/ao-app-tray.svg
-  become: yes
+- name: Remove default icons
+  shell: "xfconf-query --channel xfce4-desktop --property /desktop-icons/file-icons/show-{{item}} --set false"
+  with_items:
+    - home
+    - filesystem
+    - trash
+    - removable
