@@ -32,3 +32,8 @@
 
 - name: Set theme to victory-gtk-theme-18
   shell: "xfconf-query --channel xsettings --property /Net/ThemeName --set victory-gtk-theme-18.07"
+
+- name: Install Plank 
+  apt:
+    name: plank
+  become: yes
