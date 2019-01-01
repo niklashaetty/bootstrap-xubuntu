@@ -2,10 +2,12 @@
 - name: Install Numix icons
   apt:
     name: numix-icon-theme
+  become: yes
 
 - name: Install Numix circle
   apt:
     name: numix-icon-theme-circle
+  become: yes
 
 - name: Set icons to numix-icon-theme
   shell: "xfconf-query --channel xsettings --property /Net/IconThemeName --set numix-icon-theme"
