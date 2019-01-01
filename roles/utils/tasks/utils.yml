@@ -14,3 +14,8 @@
   apt: 
     name: python-psutil
   become: yes
+
+- name: Install screenfetch
+  apt:
+    name: screenfetch
+  become: yes
