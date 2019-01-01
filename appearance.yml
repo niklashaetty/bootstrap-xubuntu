@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  connection: local
+
+  vars:
+    user: niklas
+
+  tasks:
+    - include_role: 
+        name: appearance
