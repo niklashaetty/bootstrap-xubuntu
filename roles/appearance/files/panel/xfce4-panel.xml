@@ -7,13 +7,13 @@
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="16"/>
-        <value type="int" value="2"/>
         <value type="int" value="1"/>
-        <value type="int" value="14"/>
-        <value type="int" value="8"/>
-        <value type="int" value="9"/>
-        <value type="int" value="11"/>
+        <value type="int" value="2"/>
+        <value type="int" value="3"/>
+        <value type="int" value="4"/>
+        <value type="int" value="5"/>
+        <value type="int" value="6"/>
+        <value type="int" value="7"/>
       </property>
       <property name="background-style" type="uint" value="0"/>
       <property name="background-alpha" type="uint" value="100"/>
@@ -29,32 +29,46 @@
     </property>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-8" type="string" value="power-manager-plugin"/>
-    <property name="plugin-9" type="string" value="pulseaudio">
+
+    <!-- Left menu icon -->
+    <property name="plugin-1" type="string" value="whiskermenu"/>
+
+    <!-- List of active applications -->
+    <property name="plugin-2" type="string" value="tasklist">
+      <property name="show-labels" type="bool" value="true"/>
+      <property name="grouping" type="uint" value="1"/>
+    </property>
+
+    <!-- Separator expander-->
+    <property name="plugin-3" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="1"/>
+    </property>
+
+    <!-- Status notifier (internet connection)-->
+    <property name="plugin-4" type="string" value="statusnotifier">
+      <property name="known-items" type="array">
+        <value type="string" value="nm-applet"/>
+      </property>
+    </property>
+
+    <!-- Power manager -->
+    <property name="plugin-5" type="string" value="power-manager-plugin"/>
+
+    <!-- Sound -->
+    <property name="plugin-6" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="enable-mpris" type="bool" value="true"/>
       <property name="mixer-command" type="string" value="pavucontrol"/>
       <property name="mpris-players" type="string" value="parole"/>
       <property name="show-notifications" type="bool" value="true"/>
     </property>
-    <property name="plugin-11" type="string" value="clock">
+
+    <!-- Clock -->
+    <property name="plugin-7" type="string" value="clock">
       <property name="digital-format" type="string" value="%d %b %T"/>
       <property name="tooltip-format" type="string" value="%A %d %B %Y"/>
       <property name="mode" type="uint" value="2"/>
-    </property>
-    <property name="plugin-14" type="string" value="statusnotifier">
-      <property name="known-items" type="array">
-        <value type="string" value="nm-applet"/>
-      </property>
-    </property>
-    <property name="plugin-16" type="string" value="whiskermenu"/>
-    <property name="plugin-1" type="string" value="separator">
-      <property name="expand" type="bool" value="true"/>
-      <property name="style" type="uint" value="1"/>
-    </property>
-    <property name="plugin-2" type="string" value="tasklist">
-      <property name="show-labels" type="bool" value="true"/>
-      <property name="grouping" type="uint" value="1"/>
     </property>
   </property>
   <property name="configver" type="int" value="2"/>
