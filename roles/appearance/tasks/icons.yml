@@ -1,4 +1,12 @@
 ---
-- name: Set icons to papirus-icon-theme
-  shell: "xfconf-query --channel xsettings --property /Net/IconThemeName --set Zukitre"
+- name: Install Numix icons
+  apt:
+    name: numix-icon-theme
+
+- name: Install Numix circle
+  apt:
+    name: numix-icon-theme-circle
+
+- name: Set icons to numix-icon-theme
+  shell: "xfconf-query --channel xsettings --property /Net/IconThemeName --set numix-icon-theme"
 
