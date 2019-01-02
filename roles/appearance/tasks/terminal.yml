@@ -12,11 +12,7 @@
     src: "{{ install_dir }}/terminal/nord.theme"
     dest: ~/usr/share/xfce4/terminal/colorschemes/nord.theme
 
-- name: Switch terminal theme 1
-  shell: grep -Fxvf <(cat /usr/share/xfce4/terminal/colorschemes/*.theme) ~/.config/xfce4/terminal/terminalrc > ~/.config/xfce4/terminal/.terminalrc.tmp
-
-- name: Switch terminal theme 2
-  shell: grep -v -e Name -e Scheme "/usr/share/xfce4/terminal/colorschemes/nord.theme" >> ~/.config/xfce4/terminal/.terminalrc.tmp
-
-- name: Switch terminal theme 3
-  shell: mv ~/.config/xfce4/terminal/.terminalrc.tmp ~/.config/xfce4/terminal/terminalrc
+- name: Copy terminal settings and switch theme
+  copy:
+    src: "{{ install_dir }}/terminal/terminalrc"
+    dest: "~/.config/xfce4/terminal/terminalrc"

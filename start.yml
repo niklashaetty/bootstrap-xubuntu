@@ -12,3 +12,5 @@
         name: appearance
     - include_role:
         name: programs
+
+# ansible-playbook start.yml --extra-vars "ansible_become_pass=qwertyui"
