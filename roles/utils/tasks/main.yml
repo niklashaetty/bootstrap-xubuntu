@@ -7,3 +7,6 @@
 
 - name: Starting utils.yml
   include_tasks: utils.yml
+
+- name: Starting shortcuts.yml
+  include_tasks: shortcuts.yml

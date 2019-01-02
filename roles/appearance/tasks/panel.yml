@@ -6,3 +6,4 @@
   copy:
     src: "{{ install_dir }}/ao-app-tray.svg"
     dest: "/usr/share/icons/ao-app-tray.svg"
+  become: yes
