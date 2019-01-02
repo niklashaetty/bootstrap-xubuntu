@@ -10,3 +10,6 @@
 
 - name: Starting shortcuts.yml
   include_tasks: shortcuts.yml
+
+- name: Starting git_config.yml
+  include_tasks: git_config.yml

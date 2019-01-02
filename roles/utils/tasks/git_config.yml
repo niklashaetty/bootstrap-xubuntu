@@ -1,0 +1,6 @@
+---
+- name: Set git config user.email to {{ git_email }}
+  shell: git config --global user.email "{{ git_email }}"
+
+- name: Set git config user.name to {{ git_email }}
+  shell: git config --global user.name "{{ git_name }}"

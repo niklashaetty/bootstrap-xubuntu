@@ -12,3 +12,16 @@
 - name: Set theme to victory-gtk-theme-18
   shell: "xfconf-query --channel xsettings --property /Net/ThemeName --set victory-gtk-theme-18.07"
 
+- name: Set window theme to victory-gtk-theme-18
+  shell: "xfconf-query --channel xfwm4 --property /general/theme --set victory-gtk-theme-18.07"
+
+- name: Wrap workspaces set to false
+  shell: "xfconf-query --channel xfwm4 --property /general/wrap_layout --set false"
+
+- name: Cycle workspaces set to false
+  shell: "xfconf-query --channel xfwm4 --property /general/wrap_cycle --set false"
+
+- name: Scroll workspaces set to false
+  shell: "xfconf-query --channel xfwm4 --property /general/scroll_workspaces --set false"
+  
+  

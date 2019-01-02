@@ -2,11 +2,5 @@
 - name: Bind terminal to Insert
   shell: "xfconf-query --channel xfce4-keyboard-shortcuts --create --type string --property /commands/custom/Insert --set 'xfce4-terminal --drop-down'"
 
-- name: Bind show desktop to win-key
+- name: Bind whisker to win-key
   shell: "xfconf-query --channel xfce4-keyboard-shortcuts --create --type string --property /commands/custom/Super_L --set 'xfce4-popup-whiskermenu'"   
-
-- name: Bind workspace button left
-  shell: "xfconf-query --channel xfce4-keyboard-shortcuts --create --type string --property /xfwm4/custom/<Control><Alt>Left --set 'left_workspace_key'"  
-
-- name: Bind workspace button right
-  shell: "xfconf-query --channel xfce4-keyboard-shortcuts --create --type string --property /xfwm4/custom/<Control><Alt>Right --set 'right_workspace_key'"

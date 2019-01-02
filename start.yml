@@ -4,6 +4,8 @@
 
   vars:
     user: niklas
+    git_email: niklas.haetty@gmail.com
+    git_name: "Niklas Hätty"
 
   tasks:
     - include_role: 
