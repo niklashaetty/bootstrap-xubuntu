@@ -7,8 +7,8 @@
 $ sudo apt install ansible
 ```
 
-### Set user
-Edit the 'user' parameter in  ```host_vars/all```
+### Set vars
+Set variables in  ```start.yml```
 
 ### Run the scripts
 ```console
