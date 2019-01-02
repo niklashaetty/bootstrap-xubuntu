@@ -9,6 +9,7 @@
 - name: get-update
   shell: "apt-get update"
   become: yes
+  ignore_errors: yes
 
 - name: Install Sublime text 3
   apt:

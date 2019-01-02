@@ -3,9 +3,10 @@
 - name: Copy vscode 
   copy:
     src: files/vscode/vscode_1.30amd64.deb
-    dest: /opt/vscode_1.30amd64.deb
+    dest: /tmp/vscode_1.30amd64.deb
   become: yes
 
 - name: Install Visual Studio Code
-  shell: "apt install /opt/vscode_1.30amd64.deb"
+  apt:
+    deb: /tmp/vscode_1.30amd64.deb
   become: yes
