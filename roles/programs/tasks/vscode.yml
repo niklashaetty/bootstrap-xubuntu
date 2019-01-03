@@ -1,0 +1,9 @@
+---
+- name: Copy .deb file
+  copy:
+    src: files/vscode/vscode_1.30amd64.deb
+    dest: "{{ install_dir }}/vscode_1.30amd64.deb"
+
+- name: Install Visual Studio Code
+  shell: apt install {{ install_dir }}/vscode_1.30amd64.deb
+  become: yes
