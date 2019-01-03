@@ -17,7 +17,7 @@ There are currently 3 roles:
 	- Sublime 
 
 ## Appearance screenshots:
-![](images/screenshot.png =640x360)
+![](/images/screenshot.png)
 
 ## Get started
 You need to have git installed and the repository cloned. 
@@ -34,17 +34,17 @@ Set variables in  ```start.yml```
 Each role is tagged with its name, so you can choose which roles you want.
 ### To run everything
 ```console
-ansible-playbook start.yml --ask-become-pass"
+ansible-playbook start.yml --ask-become-pass
 ```
 
 ### To run only e.g. appearance and utils
 ```console
-ansible-playbook start.yml --ask-become-pass" --tags "appearance, utils"
+ansible-playbook start.yml --ask-become-pass --tags "appearance, utils"
 ```
 
 ### To skip i.e. appearance
 ```console
-ansible-playbook start.yml --ask-become-pass" --skip-tags "appearance"
+ansible-playbook start.yml --ask-become-pass --skip-tags "appearance"
 ```
 
 ## How to find out what a xfconf setting is called.
