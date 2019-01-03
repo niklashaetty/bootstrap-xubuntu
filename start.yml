@@ -10,9 +10,17 @@
   tasks:
     - include_role: 
         name: utils
+      tags:
+        - utils
+
     - include_role: 
         name: appearance
+      tags:
+        - appearance
+
     - include_role:
         name: programs
+      tags:
+        - programs
 
 # ansible-playbook start.yml --extra-vars "ansible_become_pass=qwertyui"
