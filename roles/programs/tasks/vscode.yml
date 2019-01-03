@@ -1,5 +1,4 @@
 ---
-
 - name: Copy vscode 
   copy:
     src: files/vscode/vscode_1.30amd64.deb
@@ -10,3 +9,6 @@
   apt:
     deb: /tmp/vscode_1.30amd64.deb
   become: yes
+
+- name: Install theme
+  shell: git clone https://github.com/equinusocio/vsc-material-theme.git ~/.vscode/extensions/Equinusocio.vsc-material-theme
