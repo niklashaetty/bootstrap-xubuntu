@@ -23,4 +23,11 @@
       tags:
         - programs
 
-# ansible-playbook start.yml --extra-vars "ansible_become_pass=qwertyui"
+# To run everything:
+# ansible-playbook start.yml --ask-become-pass
+
+# To skip e.g. programs:
+# ansible-playbook start.yml --ask-become-pass --skip-tags "programs"
+
+# To only run e.g. programs and utils
+# ansible-playbook start.yml --ask-become-pass --tags "programs, utils"

@@ -22,5 +22,5 @@
 
 - name: Configure Sublime text 3
   copy:
-    src: files/Preferences.sublime-settings
+    src: files/sublime/Preferences.sublime-settings
     dest: ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
