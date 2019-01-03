@@ -9,5 +9,4 @@
 
 - name: Starting to install Visual Studio Code
   include_tasks: vscode.yml
-  become: yes
 
